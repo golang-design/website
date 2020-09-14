@@ -1,0 +1,168 @@
+html, body {
+    overflow: hidden;
+    margin: 0;
+    background-color: #333;
+}
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
+    color: #333;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+#app {
+    position: absolute;
+    width: 500px;
+    text-align: left;
+    top: 40%;
+    left: 20%;
+    margin-left: -160px;
+    margin-top: -160px;
+}
+h1 {
+    color: rgb(0, 145, 230);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 20px 0px 12px;
+    left: 4px;
+}
+h2 {
+    color: #999;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: .12em;
+    margin-bottom: 30px;
+    left: 3px;
+    font-style: italic;
+}
+h1, h2 {
+    position: relative;
+}
+#app span {
+    font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
+    color: rgb(0, 145, 230);
+    font-size: 10px;
+    line-height: 4em;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+p {
+    font-size: 16px;
+    line-height: 3em;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+a {
+    color: #999;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+a:hover {
+    color: #0176BA;
+}
+img {
+    width: 150px;
+    height: 150px;
+    pointer-events: none;
+}
+#extern {
+    position: absolute;
+    text-align: left;
+    bottom: 1%;
+    width: 500px;
+    left: 20%;
+    margin-left: -160px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+#extern p {
+    display: inline;
+    font-size: 8px;
+    line-height: 2em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+#extern div {
+    color: #999;
+    font-size: 8px;
+    line-height: 0.2em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+#extern p::after {
+    color: white;
+    content: ' | ';
+}
+#extern p:nth-child(5):after { 
+    content: '';
+}
+#extern p:last-child:after { 
+    content: '';
+}
+.github a {
+    font-weight: bold;
+    color: rgb(45, 152, 253);
+}
+
+@media (max-width: 1000px) {
+    #app {
+        position: absolute;
+        width: 320px;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        margin-left: -160px;
+        margin-top: -160px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    #extern {
+        position: absolute;
+        text-align: center;
+        bottom: 1%;
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+}
+
+@media (max-width: 450px) {
+#extern {
+    position: absolute;
+    text-align: center;
+    bottom: 1%;
+    width: 320px;
+    left: 50%;
+    margin-left: -160px;
+}
+#extern div {
+    color: #999;
+    font-size: 8px;
+    line-height: 0.2em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+#extern p {
+    font-size: 8px;
+    line-height: 0.2em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+}
