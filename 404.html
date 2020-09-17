@@ -12,44 +12,27 @@
         <title>The golang.design Initiative</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
         <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
-        <link rel="stylesheet" href="render.css">
+        <link rel="stylesheet" href="/render.css">
     </head>
     <body>
       <div id="background"></div>
+      <canvas></canvas>
       <div id="app">
         <img src="favicon.svg">
         <h1>404 ＼(º □ º l|l)/</h1>
         <h2>THE GOLANG.DESIGN INITIATIVE</h2>
         <span>PROJECTS</span>
-        <p><a href="/history" target="_blank">/history</a></p>
-        <p><a href="/under-the-hood" target="_blank">/under-the-hood</a></p>
+        <p><a href="/">goto /home</a></p>
       </div>
       <div id="extern">
         <div>&copy; 2020 @golang-design/members</div>
-        <p class="github"><a href="https://github.com/golang-design">GitHub</a></p>
+        <p class="github"><a href="https://github.com/golang-design">About</a></p>
+        <p class="github"><a href="https://golang.design/s/">S</a></p>
       </div>
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
-    <script src="net.js"></script>
-    <script>
-      BG.NET({
-        el: "#background",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x3fa4ff,
-        backgroundColor: 0x252525,
-        points: 6.00,
-        maxDistance: 18.00,
-        spacing: 16.00
-      })
-    </script>
-    <!-- TODO: maybe switch background effect every month -->
-    <!-- <script src="app.js"></script> -->
+    <script src="/net.js"></script>
+    <script src="/app.js"></script>
 </html>
