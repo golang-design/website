@@ -1,33 +1,58 @@
 html, body {
-    overflow: hidden;
     margin: 0;
-    background-color: #333;
+    background-color: #252525;
+}
+#bar-canvas {
+    display: block;
 }
 body {
     font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
-    color: #333;
+    color: #252525;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    /* https://stackoverflow.com/a/8712442 */
+    text-shadow: 1px 1px 0 #252525,
+    -1px 1px 0 #252525,
+    1px -1px 0 #252525,
+    -1px -1px 0 #252525,
+    0px 1px 0 #252525,
+    0px -1px 0 #252525,
+    -1px 0px 0 #252525,
+    1px 0px 0 #252525,
+    1px 1px 0 #252525,
+    -1px 1px 0 #252525,
+    1px -1px 0 #252525,
+    -1px -1px 0 #252525,
+    0px 1px 0 #252525,
+    0px -1px 0 #252525,
+    -1px 0px 0 #252525,
+    1px 0px 0 #252525,
+    1px 1px 0 #252525,
+    -1px 1px 0 #252525,
+    1px -1px 0 #252525,
+    -1px -1px 0 #252525,
+    1px 1px 0 #252525,
+    -1px 1px 0 #252525,
+    1px -1px 0 #252525,
+    -1px -1px 0 #252525;
 }
 #background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
+    height: 100vh;
+}
 #app {
     position: absolute;
     width: 500px;
     text-align: left;
     top: 40%;
-    left: 20%;
-    margin-left: -160px;
+    left: 10%;
     margin-top: -160px;
 }
 h1 {
@@ -82,12 +107,11 @@ img {
     pointer-events: none;
 }
 #extern {
+    margin-top: 40px;
+    margin-bottom: 30px;
     position: absolute;
     text-align: left;
-    bottom: 1%;
     width: 500px;
-    left: 20%;
-    margin-left: -160px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 #extern p {
@@ -108,9 +132,6 @@ img {
     color: white;
     content: ' | ';
 }
-#extern p:nth-child(5):after { 
-    content: '';
-}
 #extern p:last-child:after { 
     content: '';
 }
@@ -128,41 +149,24 @@ img {
         left: 50%;
         margin-left: -160px;
         margin-top: -160px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
     }
     #extern {
         position: absolute;
         text-align: center;
-        bottom: 1%;
         width: 320px;
-        left: 50%;
-        margin-left: -160px;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     }
-}
-
-@media (max-width: 450px) {
-#extern {
-    position: absolute;
-    text-align: center;
-    bottom: 1%;
-    width: 320px;
-    left: 50%;
-    margin-left: -160px;
-}
-#extern div {
-    color: #999;
-    font-size: 8px;
-    line-height: 0.2em;
-    margin: 0;
-    letter-spacing: 2px;
-}
-#extern p {
-    font-size: 8px;
-    line-height: 0.2em;
-    margin: 0;
-    letter-spacing: 2px;
-}
+    #extern div {
+        color: #999;
+        font-size: 8px;
+        line-height: 0.2em;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+    #extern p {
+        font-size: 8px;
+        line-height: 0.2em;
+        margin: 0;
+        letter-spacing: 2px;
+    }
 }

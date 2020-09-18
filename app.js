@@ -3,10 +3,9 @@ if (Math.random() < 0.5) { colorbar() } else { particles() }
 
 function particles() {
   BG.NET({
-    el: "#background",
+    el: '#background',
     mouseControls: true,
     touchControls: true,
-    gyroControls: false,
     minHeight: 200.00,
     minWidth: 200.00,
     scale: 1.00,
@@ -15,7 +14,7 @@ function particles() {
     backgroundColor: 0x252525,
     points: 6.00,
     maxDistance: 18.00,
-    spacing: 16.00
+    spacing: 20.00
   })
 }
 
@@ -23,16 +22,14 @@ function colorbar() {
   document.addEventListener('touchmove', e => e.preventDefault())
   const u = Math.PI*2
   const c = document.getElementsByTagName('canvas')[0]
-  const pr = window.devicePixelRatio || 1
   const w = window.innerWidth
   const h = window.innerHeight
-  c.width = w*pr
-  c.height = h*pr
+  c.width = w
+  c.height = h
   let f = 90
   let q = 0
   let r = 0
   const x = c.getContext('2d')
-  x.scale(pr, pr)
   x.globalAlpha = 0.6
   const i = () => {
     x.clearRect(0,0,w,h)
