@@ -106,6 +106,9 @@ img {
     height: 150px;
     pointer-events: none;
 }
+.sponsors img {
+    pointer-events: all;
+}
 #extern {
     margin-top: 40px;
     margin-bottom: 50px;
